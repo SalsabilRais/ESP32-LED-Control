@@ -1,11 +1,11 @@
 # 💡 ESP32 IoT GPIO & LED Web Controller
 
 <p align="left">
-  <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino IDE" />
-  <img src="https://img.shields.io/badge/HTTP_WebServer-0284C7?style=for-the-badge&logo=wifi&logoColor=white" alt="WebServer" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="[https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)" alt="ESP32" />
+  <img src="[https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)" alt="C++" />
+  <img src="[https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=Arduino&logoColor=white](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=Arduino&logoColor=white)" alt="Arduino IDE" />
+  <img src="[https://img.shields.io/badge/HTTP_WebServer-0284C7?style=for-the-badge&logo=wifi&logoColor=white](https://img.shields.io/badge/HTTP_WebServer-0284C7?style=for-the-badge&logo=wifi&logoColor=white)" alt="WebServer" />
+  <img src="[https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)" alt="HTML5" />
 </p>
 
 ## 📌 Overview
@@ -22,5 +22,39 @@ An **IoT Wireless GPIO Control System** built on an **ESP32** microcontroller. T
 
 ## ⚙️ System Architecture & Workflow
 
-```text
-[ Smartphone Browser ] ──( HTTP GET /ON or /OFF )──► [ ESP32 Web Server ] ──► [ GPIO Output ] ──► [ LED Circuit ]
+> **[ Smartphone Browser ]** ──(`HTTP GET /ON or /OFF`)──► **[ ESP32 Web Server ]** ──► **[ GPIO Output ]** ──► **[ LED Circuit ]**
+
+1. **Network Initialization:** The ESP32 connects to the local Wi-Fi network (`STA` mode) and starts listening on port `80`.
+2. **Client Connection:** The user accesses the ESP32's local IP address via a mobile browser.
+3. **HTTP Request Parsing:** Pressing the web interface buttons dispatches HTTP requests that the firmware parses to switch the GPIO pin state.
+
+---
+
+## 🔌 Hardware Components
+- **Microcontroller:** ESP32 Development Board
+- **Actuator & Protection:** 5mm LED + Current-Limiting Resistor (`220Ω – 330Ω`)
+- **Prototyping:** Breadboard & Male-to-Male Jumper Wires
+
+---
+
+## 📸 Project Preview
+
+<p align="center">
+  <img width="42%" alt="ESP32 LED Web Interface" src="[https://github.com/user-attachments/assets/2c56041f-9059-4b98-96a0-66afc073454e](https://github.com/user-attachments/assets/2c56041f-9059-4b98-96a0-66afc073454e)" />
+  &nbsp;&nbsp;
+  <img width="42%" alt="ESP32 LED Hardware Circuit" src="[https://github.com/user-attachments/assets/f1ad4481-3b59-414b-82bf-6e643fc80012](https://github.com/user-attachments/assets/f1ad4481-3b59-414b-82bf-6e643fc80012)" />
+</p>
+
+---
+
+## 🚀 Future Roadmap
+- [ ] Expand to multi-channel relay control for home automation appliances
+- [ ] Upgrade UI with asynchronous `fetch()` API calls (no page reload)
+- [ ] Integrate environmental sensor telemetry alongside actuator controls
+
+---
+
+## 👩‍💻 Author
+**Salsabil Rais** — Embedded Systems & IoT Student (FST Tangier)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)]([https://linkedin.com/in/salsabil-rais](https://linkedin.com/in/salsabil-rais))
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/SalsabilRais)
